@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Book</title>
+    <meta name="description" content="Contact Book" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- input record -->
+      <div class="record-input">
+        <h2>Contact Detail</h2>
+        <div class="entry-form">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+
+            <label for="contact-num">Contact Number</label>
+            <input type="text" name="contact-num" id="contact-num" />
+          </form>
+
+          <!-- alert message -->
+          <span class="message">Message Here</span>
+
+          <div class="input-buttons">
+            <button type="submit" id="submit-button">Add Contact</button>
+
+            <button type="button" id="cancel-button">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- display record -->
+      <div class="record-display">
+        <h2>Available Contact</h2>
+        <!-- reset button -->
+        <button type="button" id="reset-button">Reset</button>
+
+        <div class="record-container">
+          <!-- single record -->
+          <!--
+            <div class="record-item">
+            <div class="record-el">
+              <span id="labelling">Contact ID: </span>
+              <span id="contact-id-content">1</span>
+            </div>
+
+            <div class="record-el">
+              <span id="labelling">Name: </span>
+              <span id="name-content">Aria Adi Pramesta</span>
+            </div>
+
+            <div class="record-el">
+              <span id="labelling">Email: </span>
+              <span id="email-content">Aria@aria.com</span>
+            </div>
+
+            <div class="record-el">
+              <span id="labelling">Contact Number: </span>
+              <span id="contact-num-content">+62811-2341-5674</span>
+            </div>
+
+            <button type="button" id="delete-button">Delete</button>
+          </div>
+          -->
+
+          <!-- end of single record -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JS file -->
+    <script src="script.js"></script>
+  </body>
+</html>
