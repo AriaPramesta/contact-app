@@ -8,52 +8,52 @@ const deleteButton = document.getElementById("delete-button");
 
 const name = document.getElementById("name");
 const email = document.getElementById("email");
-const number = document.getElementById("contact-num");
+const phone = document.getElementById("contact-num");
 
-let contactArray = [];
+let contacts = [];
 let id = 0;
 
 // Object constructor for Contact
-function Contact(id, name, email, number) {
+function Contact(id, name, email, phone) {
   this.id = id;
   this.name = name;
   this.email = email;
-  this.number = number;
+  this.phone = phone;
 }
 
 // Display available record
 document.addEventListener("DOMContentLoaded", function () {
-  contactArray = [
+  contacts = [
     {
-      id: 0,
+      id: 1,
       name: "Aria Adi Pramesta",
       email: "aria@aria.com",
-      number: "+6281123415674",
+      phone: "+6281123415674",
     },
   ];
-  displayRecord();
+  displayContact();
 });
 
 // Display function
-function displayRecord() {
-  contactArray.forEach(function (singleContact) {
-    addToList(singleContact);
+function displayContact() {
+  contacts.forEach(function (singleContact) {
+    renderToList(singleContact);
   });
 }
 
 // Adding contact record
 addButton.addEventListener("click", function () {
   id++;
-  const contact = new Contact(id, name.value, email.value, number.value);
-  contactArray.push(contact);
+  const contact = new Contact(id, name.value, email.value, phone.value);
+  contacts.push(contact);
 
   // Adding to list
-  addToList(contact);
+  renderToList(contact);
 });
 
 // Add to list (on the DOM)
 {
-  function addToList(item) {
+  function renderToList(item) {
     const newRecordDiv = document.createElement("div");
     newRecordDiv.classList.add("record-item");
     newRecordDiv.innerHTML = `
@@ -73,8 +73,8 @@ addButton.addEventListener("click", function () {
         </div>
 
         <div class="record-el">
-            <span id="labelling">Contact Number: </span>
-            <span id="contact-num-content">${item.number}</span>
+            <span id="labelling">Phone: </span>
+            <span id="contact-num-content">${item.phone}</span>
         </div>
 
         <button type="button" id="delete-button">Delete</button>
@@ -92,7 +92,7 @@ recordContainer.addEventListener("click", function (event) {
   }
 });
 
-// Clear all input fields
+// Cancel all input fields
 cancelButton.addEventListener("click", function () {
   clearInputFields();
 });
@@ -100,5 +100,5 @@ cancelButton.addEventListener("click", function () {
 function clearInputFields() {
   name.value = "";
   email.value = "";
-  number.value = "";
+  phone.value = "";
 }
