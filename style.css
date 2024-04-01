@@ -96,17 +96,6 @@ form input:focus {
   visibility: hidden;
 }
 
-/* alert types */
-.error {
-  background: #f32013;
-  visibility: visible;
-}
-
-.success {
-  background: #4bb543;
-  visibility: visible;
-}
-
 /*************************************/
 
 .input-button {
