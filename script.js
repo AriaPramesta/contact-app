@@ -1,10 +1,7 @@
 const addButton = document.getElementById("submit-button");
 const cancelButton = document.getElementById("cancel-button");
-const resetButton = document.getElementById("reset-button");
 const recordContainer = document.querySelector(".record-container");
 const deleteButton = document.getElementById("delete-button");
-
-/**************************************/
 
 const name = document.getElementById("name");
 const email = document.getElementById("email");
@@ -43,8 +40,13 @@ function displayContact() {
 
 // Adding contact record
 addButton.addEventListener("click", function () {
-  id++;
-  const contact = new Contact(id, name.value, email.value, phone.value);
+  const newId = contacts.length ? contacts[contacts.length - 1].id + 1 : 1;
+  const contact = new Contact(
+    (id = newId),
+    name.value,
+    email.value,
+    phone.value
+  );
   contacts.push(contact);
 
   // Adding to list
@@ -54,6 +56,16 @@ addButton.addEventListener("click", function () {
 // Add to list (on the DOM)
 {
   function renderToList(item) {
+    // const queryString = window.location.search;
+    // const params = new URLSearchParams(queryString);
+    // const keyword = params.get("q").toLowerCase;
+
+    // const contactsFilter = contacts.filter((contact) => {
+    //   if (contact.name.toLocaleLowerCase().includes(keyword)) {
+    //     return contact;
+    //   }
+    // });
+
     const newRecordDiv = document.createElement("div");
     newRecordDiv.classList.add("record-item");
     newRecordDiv.innerHTML = `
@@ -94,11 +106,13 @@ recordContainer.addEventListener("click", function (event) {
 
 // Cancel all input fields
 cancelButton.addEventListener("click", function () {
-  clearInputFields();
+  cancelInputFields();
 });
 
-function clearInputFields() {
+function cancelInputFields() {
   name.value = "";
   email.value = "";
   phone.value = "";
 }
+
+// window.addEventListener("load", renderToList);
