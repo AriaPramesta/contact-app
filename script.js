@@ -56,16 +56,6 @@ addButton.addEventListener("click", function () {
 // Add to list (on the DOM)
 {
   function renderToList(item) {
-    // const queryString = window.location.search;
-    // const params = new URLSearchParams(queryString);
-    // const keyword = params.get("q").toLowerCase;
-
-    // const contactsFilter = contacts.filter((contact) => {
-    //   if (contact.name.toLocaleLowerCase().includes(keyword)) {
-    //     return contact;
-    //   }
-    // });
-
     const newRecordDiv = document.createElement("div");
     newRecordDiv.classList.add("record-item");
     newRecordDiv.innerHTML = `
@@ -115,5 +105,3 @@ function cancelInputFields() {
   email.value = "";
   phone.value = "";
 }
-
-// window.addEventListener("load", renderToList);
