@@ -90,6 +90,7 @@ addButton.addEventListener("click", function () {
         </div>
 
         <button type="button" id="delete-button">Delete</button>
+        <button type="button" id="edit-button">Edit</button>
         `;
     recordContainer.appendChild(newRecordDiv);
   }
