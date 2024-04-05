@@ -24,9 +24,6 @@
             <input type="text" name="contact-num" id="contact-num" />
           </form>
 
-          <!-- alert message -->
-          <span class="message">Message Here</span>
-
           <div class="input-buttons">
             <button type="submit" id="submit-button">Add Contact</button>
 
@@ -35,50 +32,30 @@
         </div>
       </div>
 
-      <!-- display record -->
-      <div class="record-display">
-        <h2>Available Contact</h2>
+      <!-- display contacts -->
+      <div class="contacts-display">
+        <div class="header-contacts-display">
+          <h2>Available Contact</h2>
+          <a href="#">Add Contact</a>
+        </div>
 
         <!-- search contact -->
-        <form id="search-contact" method="get">
+        <form id="search-contacts" method="get">
           <input
             type="text"
             name="q"
             id="search-input"
-            placeholder="Search Contact"
+            placeholder="Search Contacts"
           />
           <button type="submit">Search</button>
         </form>
 
-        <div class="record-container">
-          <!-- single record -->
-          <!--
-            <div class="record-item">
-            <div class="record-el">
-              <span id="labelling">Contact ID: </span>
-              <span id="contact-id-content">1</span>
-            </div>
-
-            <div class="record-el">
-              <span id="labelling">Name: </span>
-              <span id="name-content">Aria Adi Pramesta</span>
-            </div>
-
-            <div class="record-el">
-              <span id="labelling">Email: </span>
-              <span id="email-content">Aria@aria.com</span>
-            </div>
-
-            <div class="record-el">
-              <span id="labelling">Contact Number: </span>
-              <span id="contact-num-content">+62811-2341-5674</span>
-            </div>
-
-            <button type="button" id="delete-button">Delete</button>
-          </div>
-          -->
-
-          <!-- end of single record -->
+        <div id="contacts-list">
+          <!-- data contacts -->
+          <!-- <div class="single-contact">
+            <p>Aria Adi Pramesta</p>
+            <p>+6212345678909</p>
+          </div> -->
         </div>
       </div>
     </div>
