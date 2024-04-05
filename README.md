@@ -7,6 +7,7 @@ This is a simple contact app from tutorial
 ## Feature
 
 - **Add Contact**
+- **Search Contact**
 - **Delete Contact**
 
 ## Technology Stack
