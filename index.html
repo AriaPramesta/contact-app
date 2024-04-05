@@ -9,26 +9,24 @@
   </head>
   <body>
     <div class="main-container">
-      <!-- input record -->
-      <div class="record-input">
+      <!-- input contact -->
+      <div class="contact-input">
         <h2>Contact Detail</h2>
-        <div class="entry-form">
-          <form>
+        <div class="add-form-display">
+          <form id="add-contact">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" />
 
             <label for="email">Email</label>
             <input type="text" name="email" id="email" />
 
-            <label for="contact-num">Phone</label>
-            <input type="text" name="contact-num" id="contact-num" />
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" />
+
+            <div class="input-buttons">
+              <button type="submit" id="submit-button">Add Contact</button>
+            </div>
           </form>
-
-          <div class="input-buttons">
-            <button type="submit" id="submit-button">Add Contact</button>
-
-            <button type="button" id="cancel-button">Cancel</button>
-          </div>
         </div>
       </div>
 
