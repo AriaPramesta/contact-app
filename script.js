@@ -39,7 +39,7 @@ function renderContacts() {
     : contacts;
 
   const contactItemElements = contactsToRender.map((contact) => {
-    return `<a href="#">
+    return `<a href="/contact-detail">
     <div class="single-contact">
       <p>${contact.name}</p>
       <p>${contact.phone}</p>
