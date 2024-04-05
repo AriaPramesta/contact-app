@@ -15,8 +15,8 @@ body {
   border-radius: 5px;
 }
 
-.record-input,
-.record-display {
+.contact-input,
+.contacts-display {
   border-radius: 10px;
   padding: 20px 0;
   margin: 30px 0;
@@ -25,19 +25,39 @@ body {
   -moz-box-shadow: 0px 0px 6px 0px rgba(8, 0, 8, 1);
 }
 
-.record-input h2,
-.record-display h2 {
+.contact-input h2,
+.contacts-display h2 {
   padding: 10px 0;
   text-align: center;
   font-size: 22px;
 }
 
-.record-input {
+.header-contacts-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-contacts-display a {
+  text-decoration: none;
+  background: #000411;
+  color: #fff;
+  text-align: center;
+  border: 3px solid #fff;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.5s ease;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+.contact-input {
   color: #000;
   background: #f0f0f0;
 }
 
-.record-display {
+.contacts-display {
   background: #070f2b;
   color: #f0f0f0;
   position: relative;
@@ -45,7 +65,7 @@ body {
 
 /* record input */
 
-.entry.form {
+.add-form-display {
   padding: 10px 0;
 }
 
@@ -84,18 +104,6 @@ form input:focus {
   color: #fff;
 }
 
-.message {
-  text-align: center;
-  display: block;
-  width: 50%;
-  margin: 10px auto;
-  font-size: 14px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 0;
-  visibility: hidden;
-}
-
 /*************************************/
 
 .input-button {
@@ -125,35 +133,24 @@ button:hover {
   opacity: 1;
 }
 
-#reset-button {
-  position: absolute;
-  right: 25px;
-  top: 10px;
-  width: 120px;
-}
-
 /************************************/
 
-.record-display {
+.contacts-display {
   padding: 30px 40px;
 }
 
-.record-el {
-  display: block;
-  padding: 4px 0;
-  opacity: 0.9;
-}
-
-#labelling {
-  font-weight: 700;
-}
-
-.record-item {
-  color: #000;
-  border-radius: 10px;
-  padding: 10px 25px;
-  margin: 15px 0;
+.single-contact {
+  display: flex;
   background: #fff;
+  color: #000;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Media Queries */
@@ -166,11 +163,11 @@ button:hover {
     grid-column-gap: 30px;
   }
 
-  .record-input {
+  .contact-input {
     height: 700px;
   }
 
-  .record-container {
+  .contacts-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
