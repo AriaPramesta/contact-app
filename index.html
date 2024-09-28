@@ -1,64 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Application</title>
-    <meta name="description" content="Contact Application" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Vite + React</title>
   </head>
   <body>
-    <div class="main-container">
-      <!-- input contact -->
-      <div class="contact-input">
-        <h2>Contact Detail</h2>
-        <div class="add-form-display">
-          <form id="add-contact">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
-
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
-
-            <label for="phone">Phone</label>
-            <input type="text" name="phone" id="phone" />
-
-            <div class="input-buttons">
-              <button type="submit" id="submit-button">Add Contact</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- display contacts -->
-      <div class="contacts-display">
-        <div class="header-contacts-display">
-          <h2>Available Contact</h2>
-          <a href="add-contact/">Add Contact</a>
-        </div>
-
-        <!-- search contact -->
-        <form id="search-contacts" method="get">
-          <input
-            type="text"
-            name="q"
-            id="search-input"
-            placeholder="Search Contacts"
-          />
-          <button type="submit">Search</button>
-        </form>
-
-        <div id="contacts-list">
-          <!-- data contacts -->
-          <!-- <div class="single-contact">
-            <p>Aria Adi Pramesta</p>
-            <p>+6212345678909</p>
-          </div> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- JS file -->
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
