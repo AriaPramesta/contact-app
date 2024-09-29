@@ -114,57 +114,66 @@ export function ContactForm() {
         className="p-5 md:p-16 mx-auto min-w-[320px] max-w-[768px] min-h-screen bg-slate-900 flex flex-col justify-between lg:rounded-xl"
       >
         <div className="flex flex-col gap-5 md:gap-10">
+          <h2 className="text-xl md:text-2xl font-semibold mb-5">
+            Add Contact
+          </h2>
           <div className="flex flex-col gap-3">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name" className="text-sm font-medium">
+              Name
+            </label>
             <input
               type="text"
               name="name"
               id="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Name"
-              className="rounded-full p-3 focus:bg-stone-800 transition-colors delay-75 text-black focus:text-white"
+              placeholder="Enter your name"
+              className="rounded-lg p-3 focus:bg-stone-800 transition-colors delay-75 text-black focus:text-white"
               required // Name is required
             />
           </div>
           <div className="flex flex-col gap-3">
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone" className="text-sm font-medium">
+              Phone
+            </label>
             <input
               type="text"
               name="phone"
               id="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Phone"
-              className="rounded-full p-3 focus:bg-stone-800 transition-colors delay-75 text-black focus:text-white"
+              placeholder="Enter your phone number"
+              className="rounded-lg p-3 focus:bg-stone-800 transition-colors delay-75 text-black focus:text-white"
               required // Phone is required
             />
           </div>
           <div className="flex flex-col gap-3">
-            <label htmlFor="email">Email </label>
+            <label htmlFor="email" className="text-sm font-medium">
+              Email
+            </label>
             <input
               type="email"
               name="email"
               id="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Email"
-              className="rounded-full p-3 focus:bg-stone-800 transition-colors delay-75 text-black focus:text-white"
+              placeholder="Enter your email (optional)"
+              className="rounded-lg p-3 focus:bg-stone-800 transition-colors delay-75 text-black focus:text-white"
             />
           </div>
         </div>
 
-        <div className="flex justify-evenly items-center">
+        <div className="flex justify-evenly items-center mt-6">
           <button
             onClick={handleCancel} // Call handleCancel on button click
-            className="hover:bg-neutral-700 py-3 px-14 rounded-full"
+            className="hover:bg-neutral-700 py-3 px-14 rounded-full transition duration-300"
           >
             Cancel
           </button>
           <p>|</p>
           <button
             type="submit" // Submit button
-            className="hover:bg-neutral-700 py-3 px-14 rounded-full"
+            className="hover:bg-neutral-700 py-3 px-14 rounded-full transition duration-300"
           >
             Save
           </button>
