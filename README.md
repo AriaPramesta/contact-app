@@ -16,4 +16,4 @@ This is a simple contact app using react js and local storage
 
 ## Preview
 
-![preview home] (/public/assets/preview.png)
+![preview home](/public/assets/preview.png)
