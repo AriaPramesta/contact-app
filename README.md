@@ -1,17 +1,19 @@
 # Contact App
 
-This is a simple contact app from tutorial
-
-- Video tutorial: [Youtube](https://www.youtube.com/watch?v=3OvZNbu2BUU&list=PLBaVCXwiTaM-0RJqfnVDYKEbmnHwhXI1q&index=1&t=2259s)
+This is a simple contact app using react js and local storage
 
 ## Feature
 
 - **Add Contact**
 - **Search Contact**
 - **Delete Contact**
+- **Edit Contact**
 
 ## Technology Stack
 
-- HTML
-- CSS
-- JavaScript
+- ReactJS
+- Tailwind CSS
+
+## Preview
+
+![preview home] (/public/assets/preview.png)
